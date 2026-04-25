@@ -1,0 +1,153 @@
+/* ===== Services Section Styles ===== */
+
+.services-section {
+  padding: 80px 0;
+  background: white;
+}
+
+@media (min-width: 640px) {
+  .services-section {
+    padding: 112px 0;
+  }
+}
+
+.services-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.services-header {
+  max-width: 768px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.services-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: orange;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.services-title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #3d2b2b;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 640px) {
+  .services-title {
+    font-size: 2.25rem;
+  }
+}
+
+.services-description {
+  font-size: 1.125rem;
+  color: #737373;
+}
+
+.services-grid {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.service-card {
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  color: #070505;
+  border: 1px solid #da6c1275;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .service-card {
+    padding: 32px;
+  }
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -12px rgba(255, 165, 0, 0.15);
+}
+
+.service-card-name {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.service-card-price {
+  margin-bottom: 16px;
+}
+
+.service-card-price-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  .service-card-price-value {
+    font-size: 1.875rem;
+  }
+}
+
+.service-card-price-range {
+  font-size: 0.875rem;
+  color: #737373;
+}
+
+.service-card-desc {
+  font-size: 0.875rem;
+  margin-bottom: 24px;
+  color: #737373;
+}
+
+.service-card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.service-card-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.875rem;
+}
+
+.service-card-feature-icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+  color: orange;
+}
+
+.service-card-button {
+  width: 100%;
+  border-radius: 9999px;
+}

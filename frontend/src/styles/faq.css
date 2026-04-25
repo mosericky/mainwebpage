@@ -1,0 +1,88 @@
+/* ===== FAQ Section Styles ===== */
+
+.faq-section {
+  padding: 80px 0;
+  background: white;
+}
+
+@media (min-width: 640px) {
+  .faq-section {
+    padding: 112px 0;
+  }
+}
+
+.faq-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.faq-header {
+  max-width: 768px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.faq-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: orange;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.faq-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #141414;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 640px) {
+  .faq-title {
+    font-size: 2.25rem;
+  }
+}
+
+.faq-description {
+  font-size: 1.125rem;
+  color: #737373;
+}
+
+.faq-list {
+  max-width: 672px;
+  margin: 0 auto;
+}
+
+.faq-list .faq-item {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 12px;
+  transition: background 0.2s ease;
+}
+
+.faq-list .faq-item[data-state="open"] {
+  background: rgba(255, 165, 0, 0.1);
+}
+
+.faq-item-trigger {
+  text-align: left;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 600;
+  color: #141414;
+  padding: 20px 0;
+}
+
+.faq-item-trigger:hover {
+  text-decoration: none;
+}
+
+.faq-item-content {
+  color: #737373;
+  line-height: 1.7;
+  padding-bottom: 20px;
+}

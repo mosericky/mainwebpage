@@ -1,0 +1,115 @@
+/* ===== About Section Styles ===== */
+
+.about-section {
+  padding: 80px 0;
+  background: white;
+}
+
+@media (min-width: 640px) {
+  .about-section {
+    padding: 112px 0;
+  }
+}
+
+.about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.about-header {
+  max-width: 768px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.about-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: orange;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.about-title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #141414;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 640px) {
+  .about-title {
+    font-size: 2.25rem;
+  }
+}
+
+.about-description {
+  font-size: 1.125rem;
+  color: #737373;
+  line-height: 1.7;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .about-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 640px) {
+  .about-stats-grid {
+    gap: 32px;
+  }
+}
+
+.about-stat-card {
+  text-align: center;
+  padding: 24px;
+  border-radius: 16px;
+  background: rgba(255, 166, 0, 0.219);
+  border: 1px solid #e4a701;
+}
+
+@media (min-width: 640px) {
+  .about-stat-card {
+    padding: 32px;
+  }
+}
+
+.about-stat-icon {
+  width: 32px;
+  height: 32px;
+  color: orange;
+  margin: 0px auto 16px;
+}
+
+.about-stat-value {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: orange;
+}
+
+@media (min-width: 640px) {
+  .about-stat-value {
+    font-size: 3rem;
+  }
+}
+
+.about-stat-label {
+  font-size: 0.875rem;
+  color: #737373;
+  margin-top: 8px;
+  font-weight: 500;
+  font-family: cursive;
+}

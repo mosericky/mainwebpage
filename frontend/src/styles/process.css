@@ -1,0 +1,160 @@
+/* ===== Process Section Styles ===== */
+
+.process-section {
+  padding: 80px 0;
+  background: #f7f7f7;
+}
+
+@media (min-width: 640px) {
+  .process-section {
+    padding: 112px 0;
+  }
+}
+
+.process-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.process-header {
+  max-width: 768px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.process-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: orange;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.process-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #141414;
+  margin-bottom: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (min-width: 640px) {
+  .process-title {
+    font-size: 2.25rem;
+  }
+}
+
+.process-description {
+  font-size: 1.125rem;
+  color: #737373;
+}
+
+.process-timeline {
+  position: relative;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.process-timeline-line {
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #e5e5e5;
+}
+
+@media (min-width: 640px) {
+  .process-timeline-line {
+    left: 32px;
+  }
+}
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.process-step {
+  position: relative;
+  display: flex;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .process-step {
+    gap: 32px;
+  }
+}
+
+.process-step-icon-wrapper {
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(255, 165, 0, 0.2);
+}
+
+@media (min-width: 640px) {
+  .process-step-icon-wrapper {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.process-step-icon {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+@media (min-width: 640px) {
+  .process-step-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.process-step-content {
+  padding-top: 4px;
+}
+
+@media (min-width: 640px) {
+  .process-step-content {
+    padding-top: 12px;
+  }
+}
+
+.process-step-duration {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: orange;
+}
+
+.process-step-title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #141414;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.process-step-desc {
+  color: #737373;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  max-width: 448px;
+}

@@ -1,0 +1,82 @@
+const buttons = document.querySelectorAll("button");
+const sections = document.querySelectorAll(".content");
+
+
+buttons.forEach((btn)=>{
+  btn.addEventListener("click", ()=>{
+    buttons.forEach((btn)=>{
+      btn.classList.remove("active");
+    });
+    btn.classList.add("active");
+    const id = btn.id;
+    sections.forEach((section)=>{
+      section.classList.remove("active");
+    });
+    const req = document.getElementsByClassName(`content${id}`);
+    req[0].classList.add("active");
+  })
+})
+
+/*
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.shakergainske.app",
+    "sha256_cert_fingerprints":
+    ["DB:91:CF:E4:A9:20:94:62:68:AD:ED:E0:F6:46:81:3C:A8:A2:9C:7C:35:A8:0B:8E:72:24:7A:95:E6:A2:34:5B"]
+  }
+}]
+*/
+
+
+
+
+
+
+
+
+// === Handle Install Prompt ===
+window.addEventListener('beforeinstallprompt', (event) => {
+  // Prevent default mini-infobar
+  event.preventDefault();
+  console.log('👍 beforeinstallprompt fired');
+  
+  // Save the event for later use
+  window.deferredPrompt = event;
+
+  // Show your custom install button
+  const installBtn = document.querySelector('#butInstall');
+  if (installBtn) installBtn.classList.remove('hidden');
+});
+
+// === When user clicks install ===
+document.addEventListener('click', async (e) => {
+  if (!e.target.matches('#butInstall')) return;
+
+  console.log('🟢 Install button clicked');
+  const promptEvent = window.deferredPrompt;
+  if (!promptEvent) {
+    console.log('⚠️ No deferred prompt available.');
+    return;
+  }
+
+  // Show native prompt
+  promptEvent.prompt();
+
+  // Wait for user choice
+  const result = await promptEvent.userChoice;
+  console.log('🧩 User choice:', result);
+
+  // Clear saved prompt
+  window.deferredPrompt = null;
+
+  // Hide the install button again
+  e.target.classList.add('hidden');
+});
+
+// === Detect successful installation ===
+window.addEventListener('appinstalled', () => {
+  console.log('🎉 App installed successfully!');
+  window.deferredPrompt = null;
+});
